@@ -1,0 +1,11 @@
+header {
+  position: fixed;
+  display: flex;
+  height: 520px;
+  width: 100vw;
+  align-items: center ;
+  justify-content: center;
+flex-direction: column;
+background-color: #b1b1b157;
+background-image: url("https://www.transparenttextures.com/patterns/purty-wood.png");
+}   
