@@ -8,5 +8,8 @@ nav {
 }
 div i {
   color: red;
-  
+}
+div i {
+  display: flex;
+  flex-direction: column;
 }
