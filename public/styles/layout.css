@@ -21,8 +21,10 @@ body {
   font-family: 'Source Sans Pro', sans-serif;
 }
 main {
+  display: flex;
   width: 90vw;
   background-color: #f4f1ec;
+  
 }
 
 /*
