@@ -43,6 +43,9 @@ article .left {
 }
 article i:hover {
   color: rgba(190, 190, 23, 0.782);
-  transition: 0.3s;
   box-shadow: inset;
+  transition: 0.3s;
+}
+.tweets-container {
+  padding: 10px, 0px;
 }

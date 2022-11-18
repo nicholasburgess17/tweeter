@@ -3,33 +3,33 @@
 //Tweet Object
 const data = [
   {
-    "user": {
-      "name": "Newton",
-      "avatars": "https://i.imgur.com/73hZDYK.png"
-      ,
-      "handle": "@SirIsaac"
+    user: {
+      name: "Newton",
+      avatars: "https://i.imgur.com/73hZDYK.png",
+      handle: "@SirIsaac",
     },
-    "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
+    content: {
+      text: "If I have seen further it is by standing on the shoulders of giants",
     },
-    "created_at": 1461116232227
+    created_at: 1461116232227,
   },
   {
-    "user": {
-      "name": "Descartes",
-      "avatars": "https://i.imgur.com/nlhLi3I.png",
-      "handle": "@rd" },
-    "content": {
-      "text": "Je pense , donc je suis"
+    user: {
+      name: "Descartes",
+      avatars: "https://i.imgur.com/nlhLi3I.png",
+      handle: "@rd",
     },
-    "created_at": 1461113959088
-  }
+    content: {
+      text: "Je pense , donc je suis",
+    },
+    created_at: 1461113959088,
+  },
 ];
 // create a JavaScript function that will generate the DOM structure for a tweet, given a tweet object.
 
 //create tweet element
 const createTweetElement = (data) => {
-let $tweet = $(`<article>
+  let $tweet = $(`<article>
 <header>
   <div class="left">
     <img ${data.user.avatars} />
@@ -47,15 +47,15 @@ let $tweet = $(`<article>
   </div>
 </footer>
 </article>`);
-return $tweet;
+  return $tweet;
 };
 
 //render tweets
 const renderTweets = (tweets) => {
   for (let index in tweets) {
-    const render = createTweetElement(tweets[index])
-  $('#tweets-container').append(render);
+    const render = createTweetElement(tweets[index]);
+    $("#tweets-container").append(render);
   }
-}
+};
+$(document).ready(() => {renderTweets(data)})
 
-renderTweets(data);
