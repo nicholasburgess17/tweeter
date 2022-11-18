@@ -21,11 +21,14 @@ body {
   font-family: 'Source Sans Pro', sans-serif;
 }
 main {
-  display: flex;
   width: 90vw;
   background-color: #f4f1ec;
-  
+  padding-top: 540px; 
+  flex-direction: column;
 }
+section {
+  padding: 15px;
+}   
 
 /*
 HELPER CLASSES
@@ -34,6 +37,11 @@ HELPER CLASSES
   display: flex;
   justify-content:  flex-end;
   align-items: flex-end;
+}
+.align-left {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 .container {
   display: flex;

@@ -1,4 +1,4 @@
-header {
+.top {
   position: fixed;
   display: flex; 
   height: 520px;
@@ -6,7 +6,6 @@ header {
   align-items: center ;
   justify-content: center;
   flex-direction: column;
-
 background-image: url("https://www.transparenttextures.com/patterns/purty-wood.png");
-background-color: linear-gradient(90deg, rgba(64,86,161,0.3617822128851541) 0%, rgba(244, 241, 236, 0.537) 100%);
+background-color: #f4f1ec;
 }   
