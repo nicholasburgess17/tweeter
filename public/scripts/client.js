@@ -1,9 +1,5 @@
-/*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
 // Fake data taken from initial-tweets.json
+
 //Tweet Object
 const data = [
   {
@@ -29,7 +25,6 @@ const data = [
     "created_at": 1461113959088
   }
 ];
-////////////////////////////////////////////////////////////////////////////////////
 // create a JavaScript function that will generate the DOM structure for a tweet, given a tweet object.
 
 //create tweet element
@@ -64,4 +59,3 @@ const renderTweets = (tweets) => {
 }
 
 renderTweets(data);
-///////////////////////////////////////////////////////////////////////////////////
