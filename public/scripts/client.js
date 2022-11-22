@@ -40,6 +40,7 @@ const loadTweets = () => {
 $(document).ready(() => {
   $("#target").submit(function (event) {
     event.preventDefault();
+    renderTweets();
     const maxLength = 140;
     const strLength = $(this).find("#tweet-text").val().length;
 

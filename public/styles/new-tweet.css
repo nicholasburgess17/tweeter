@@ -1,12 +1,17 @@
 .new-tweet {
   display: flex;
   margin: 0 auto;
+  flex-direction: column;
 }
 .new-tweet div {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-top: 15px;
+}
+.new-tweet .error {
+  color: red;
+  border: solid red;
 }
 .new-tweet button {
   background-color: #4056A1;
