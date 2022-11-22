@@ -1,16 +1,21 @@
-// import { format } from 'timeago.js';
+//xss prevention 
+const escape = function (str) {
+  let div = document.createElement("div");
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+};
 const createTweetElement = (data) => {
   let $tweet = $(`<article>
 <header>
   <div class="left">
-    <img ${data.user.avatars} />
-    <a>${data.user.name}</a>
+    <img ${escape(data.user.avatars)} />
+    <a>${escape(data.user.name)}</a>
   </div>
-  <a class="right">${data.user.handle}</a>
+  <a class="right">${(data.user.handle)}</a>
 </header>
-<p>${data.content.text}</p>
+<p>${escape(data.content.text)}</p>
 <footer>
-  <time class="left">${timeago.format(data.created_at)}</time>
+  <time class="left">${escape(timeago.format(data.created_at))}</time>
   <div>
     <i class="fa-solid fa-flag"></i>
     <i class="fa-sharp fa-solid fa-repeat"></i>
@@ -29,7 +34,6 @@ const renderTweets = (tweets) => {
 };
 const loadTweets = () => {
   $.ajax("/tweets", { method: "GET" }).then(function (tweets) {
-    // console.log("Success: ", renderTweets(tweets));
     renderTweets(tweets);
   });
 };
@@ -50,17 +54,11 @@ $(document).ready(() => {
         method: "POST",
         data: tweet,
       }).then(function (res) {
-        // console.log(res);
         loadTweets();
       });
     }
-    // console.log($(this).serialize());
-    // loadTweets();
   });
 });
 
-//submit not posting
-//account for user errors (null or empty form)/over char count
 //replace alerts with jquery calls that hide or show HTML element
-//load tweets without refreshing page
-//xss check
+
