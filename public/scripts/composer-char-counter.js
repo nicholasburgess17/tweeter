@@ -10,5 +10,6 @@ $(document).ready(function() {
   }
 document.querySelector(".counter").textContent = charRemaining
 })
-  
 });
+
+//Don't submit but also don't clear...(so don't refresh page?)

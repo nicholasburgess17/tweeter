@@ -23,7 +23,7 @@ body {
 main {
   width: 90vw;
   background-color: #f4f1ec;
-  padding-top: 540px; 
+  /* padding-top: 540px;  */
   flex-direction: column;
 }
 section {
