@@ -30,6 +30,7 @@ article {
   margin: 0 auto;
   flex-direction: column;
   padding: .5em;
+  margin: 5px;
 }
 /*||||||||||||||||||||||||||||||||||||
            HELPER CLASSES
@@ -47,12 +48,12 @@ article {
 .container {
   display: flex;
   margin: 0 auto;
+  align-items: center;
 }
 /*||||||||||||||||||||||||||||||||||||
                HEADER
 ||||||||||||||||||||||||||||||||||||*/
 .top {
-  /* position: fixed; */
   display: flex; 
   height: 520px;
   width: 100vw;
@@ -182,4 +183,41 @@ article i:hover {
   padding: 10px;
   display: none;
   text-align: center;
+}
+
+/*||||||||||||||||||||||||||||||||||||
+            DESKTOP CSS
+||||||||||||||||||||||||||||||||||||*/
+
+@media (min-width: 1024px) {
+ 
+ .capsule {
+    display: flex;
+    justify-content:  flex-end;
+    align-items: flex-end;
+    width: 95vw;
+    margin: 0 auto;
+    align-items: flex-start;
+  }
+  .top {
+    width: 45vw;
+   }
+  .new-tweet{
+    display: flex;
+    flex-direction: column;
+    width: 40vw;
+    padding-left: 70px;
+  }
+  .new-tweet textarea {
+    width: 100%;
+  }
+  article {
+    display: flex;
+    flex-direction: column;
+    width: 40vw;
+    padding-left: 70px;
+  }
+  main {
+    width: 50vw;
+  }
 }
