@@ -9,10 +9,22 @@
   align-items: center;
   padding-top: 15px;
 }
-.new-tweet .error {
+
+.new-tweet #error-empty {
   color: red;
   border: solid red;
+  padding: 10px;
+  display: none;
+  text-align: center;
 }
+.new-tweet #error-over {
+  color: red;
+  border: solid red;
+  padding: 10px;
+  display: none;
+  text-align: center;
+}
+
 .new-tweet button {
   background-color: #4056A1;
   font-family: 'Bungee', sans-serif;

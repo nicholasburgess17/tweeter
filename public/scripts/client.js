@@ -1,9 +1,11 @@
-//xss prevention 
+//xss prevention
 const escape = function (str) {
   let div = document.createElement("div");
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
 };
+
+
 const createTweetElement = (data) => {
   let $tweet = $(`<article>
 <header>
@@ -11,7 +13,7 @@ const createTweetElement = (data) => {
     <img ${escape(data.user.avatars)} />
     <a>${escape(data.user.name)}</a>
   </div>
-  <a class="right">${(data.user.handle)}</a>
+  <a class="right">${data.user.handle}</a>
 </header>
 <p>${escape(data.content.text)}</p>
 <footer>
@@ -40,14 +42,16 @@ const loadTweets = () => {
 $(document).ready(() => {
   $("#target").submit(function (event) {
     event.preventDefault();
-    renderTweets();
     const maxLength = 140;
     const strLength = $(this).find("#tweet-text").val().length;
-
     if (!strLength) {
-      return alert("you must have something to say!");
+          $("#error-empty").slideDown(function () {
+            $("error-empty").css("display", "inline");
+          });
     } else if (strLength > maxLength) {
-      return alert("There are too many characters!");
+          $("#error-over").slideDown(function () {
+            $("error-over").css("display", "inline");
+          });
     } else {
       const tweet = $("#target").serialize();
       $.ajax({
@@ -55,11 +59,14 @@ $(document).ready(() => {
         method: "POST",
         data: tweet,
       }).then(function (res) {
+            $("#error-over").slideUp(function () {
+              $("error-over").css("display", "none");
+            });
+            $("#error-empty").slideUp(function () {
+              $("error-empty").css("display", "none");
+            });
         loadTweets();
       });
     }
   });
 });
-
-//replace alerts with jquery calls that hide or show HTML element
-
