@@ -198,6 +198,7 @@ article i:hover {
     width: 95vw;
     margin: 0 auto;
     align-items: flex-start;
+    margin-top: 50px;
   }
   .top {
     width: 45vw;
@@ -219,5 +220,11 @@ article i:hover {
   }
   main {
     width: 50vw;
+  }
+  .container {
+    align-items: flex-end;
+  }
+  section {
+    padding: 15px 0px;
   }
 }
