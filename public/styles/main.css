@@ -1,0 +1,185 @@
+/*||||||||||||||||||||||||||||||||||||
+           GLOBAL/LAYOUT
+||||||||||||||||||||||||||||||||||||*/
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body {
+  color: #545149;
+  background-color: #f4f1ec;
+  font-size: 24px;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+main {
+  width: 90vw;
+  background-color: #f4f1ec;
+  /* padding-top: 540px;  */
+  flex-direction: column;
+}
+section {
+  padding: 15px;
+}
+article {
+  display: flex;
+  color: #2d2c28;
+  width: 800px;
+  border: solid black;
+  margin: 0 auto;
+  flex-direction: column;
+  padding: .5em;
+}
+/*||||||||||||||||||||||||||||||||||||
+           HELPER CLASSES
+||||||||||||||||||||||||||||||||||||*/
+.align-right {
+  display: flex;
+  justify-content:  flex-end;
+  align-items: flex-end;
+}
+.align-left {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.container {
+  display: flex;
+  margin: 0 auto;
+}
+/*||||||||||||||||||||||||||||||||||||
+               HEADER
+||||||||||||||||||||||||||||||||||||*/
+.top {
+  /* position: fixed; */
+  display: flex; 
+  height: 520px;
+  width: 100vw;
+  align-items: center ;
+  justify-content: center;
+  flex-direction: column;
+background-image: url("https://www.transparenttextures.com/patterns/purty-wood.png");
+background-color: #f4f1ec;
+}   
+/*||||||||||||||||||||||||||||||||||||
+               NAV
+||||||||||||||||||||||||||||||||||||*/
+nav {
+  height: 120px;
+  width: 100vw;
+  background-color: #4056A1;
+  color: #ffffff;
+  font-family: 'Bungee', sans-serif;
+  padding: 1.5em;
+}
+nav div i {
+  color: red;
+}
+div i {
+  display: flex;
+  flex-direction: column;
+}
+/*||||||||||||||||||||||||||||||||||||
+           TWEET CONTAINER
+||||||||||||||||||||||||||||||||||||*/
+article header {
+  background-image: none;
+  display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+article header a {
+  color:#748d90
+}
+article footer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  border-top: solid #777367;
+}
+article p {
+  display: flex;
+  justify-content: center;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+article img {
+  padding-right: 5px;
+}
+article i {
+display: flex;
+justify-content: space-between;
+}
+article .left {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+article i:hover {
+  color: rgba(190, 190, 23, 0.782);
+  box-shadow: inset;
+  transition: 0.3s;
+}
+.tweets-container {
+  padding: 10px, 0px;
+}
+/*||||||||||||||||||||||||||||||||||||
+            TWEET FORM
+||||||||||||||||||||||||||||||||||||*/
+.new-tweet {
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+}
+.new-tweet div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 15px;
+}
+.new-tweet button {
+  background-color: #4056A1;
+  font-family: 'Bungee', sans-serif;
+  color: #ffffff;
+}
+.counter {
+  justify-content: flex-end;
+  font-family: 'Bungee', sans-serif;
+}
+.new-tweet textarea {
+  display: flex;
+  margin: 0 auto;
+  border-style: none;
+  outline: none;
+  background-color: #f4f1ec;
+  border-bottom: solid rgba(19, 18, 18, 0.831);
+  height: 35px;
+  width: 800px;
+}
+.new-tweet form {
+  vertical-align: middle;
+}
+.new-tweet label {
+  margin: 0 auto;
+}
+.red-count {
+  color: red;
+}
+/*||||||||||||||||||||||||||||||||||||
+            ERROR MESSAGES
+||||||||||||||||||||||||||||||||||||*/
+.new-tweet #error-empty {
+  color: red;
+  border: solid red;
+  padding: 10px;
+  display: none;
+  text-align: center;
+}
+.new-tweet #error-over {
+  color: red;
+  border: solid red;
+  padding: 10px;
+  display: none;
+  text-align: center;
+}
