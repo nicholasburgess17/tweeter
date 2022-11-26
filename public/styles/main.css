@@ -33,6 +33,7 @@ article {
   flex-direction: column;
   padding: 0.5em;
   margin: 10px;
+  word-wrap: break-word;
 }
 /*||||||||||||||||||||||||||||||||||||
            HELPER CLASSES
