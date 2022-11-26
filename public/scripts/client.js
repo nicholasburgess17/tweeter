@@ -39,6 +39,7 @@ const loadTweets = () => {
   });
 };
 $(document).ready(() => {
+  loadTweets();
   $("#target").submit(function (event) {
     event.preventDefault();
     const maxLength = 140;
@@ -67,7 +68,6 @@ $(document).ready(() => {
         $("#target").each(function(){
           this.reset();
       });
-        loadTweets();
       });
     }
   });

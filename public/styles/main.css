@@ -32,7 +32,7 @@ article {
   margin: 0 auto;
   flex-direction: column;
   padding: 0.5em;
-  margin: 5px;
+  margin: 10px;
 }
 /*||||||||||||||||||||||||||||||||||||
            HELPER CLASSES
@@ -121,8 +121,11 @@ article .left {
 }
 article i:hover {
   color: rgba(190, 190, 23, 0.782);
-  box-shadow: inset;
   transition: 0.3s;
+}
+article:hover {
+  box-shadow: 5px 5px #545149;
+  /* transition: 0.3s; */
 }
 .tweets-container {
   padding: 10px, 0px;
