@@ -18,5 +18,5 @@ This repository is the starter code for the project: Students will fork and clon
 - Node 5.10.x or above
 
 
-!["Mobile view"](./public/images/mobile.png)
-!["Desktop view](./public/images/desktop.png)
+!["Mobile view containing a view of a user profile, a tweet form and any tweets a user may see"](./public/images/mobile.png)
+!["Desktop view containing a view of user profile, a tweet form and any tweets a user may see."](./public/images/desktop.png)
