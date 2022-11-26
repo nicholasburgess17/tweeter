@@ -70,5 +70,6 @@ $(document).ready(() => {
       });
       });
     }
+    loadTweets();
   });
 });
