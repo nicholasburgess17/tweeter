@@ -4,14 +4,16 @@
 html {
   box-sizing: border-box;
 }
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 body {
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
 }
 main {
   width: 90vw;
@@ -29,7 +31,7 @@ article {
   border: solid black;
   margin: 0 auto;
   flex-direction: column;
-  padding: .5em;
+  padding: 0.5em;
   margin: 5px;
 }
 /*||||||||||||||||||||||||||||||||||||
@@ -37,7 +39,7 @@ article {
 ||||||||||||||||||||||||||||||||||||*/
 .align-right {
   display: flex;
-  justify-content:  flex-end;
+  justify-content: flex-end;
   align-items: flex-end;
 }
 .align-left {
@@ -54,24 +56,24 @@ article {
                HEADER
 ||||||||||||||||||||||||||||||||||||*/
 .top {
-  display: flex; 
+  display: flex;
   height: 520px;
   width: 100vw;
-  align-items: center ;
+  align-items: center;
   justify-content: center;
   flex-direction: column;
-background-image: url("https://www.transparenttextures.com/patterns/purty-wood.png");
-background-color: #f4f1ec;
-}   
+  background-image: url("https://www.transparenttextures.com/patterns/purty-wood.png");
+  background-color: #f4f1ec;
+}
 /*||||||||||||||||||||||||||||||||||||
                NAV
 ||||||||||||||||||||||||||||||||||||*/
 nav {
   height: 120px;
   width: 100vw;
-  background-color: #4056A1;
+  background-color: #4056a1;
   color: #ffffff;
-  font-family: 'Bungee', sans-serif;
+  font-family: "Bungee", sans-serif;
   padding: 1.5em;
 }
 nav div i {
@@ -87,11 +89,11 @@ div i {
 article header {
   background-image: none;
   display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
+  align-items: flex-start;
+  justify-content: space-between;
 }
 article header a {
-  color:#748d90
+  color: #748d90;
 }
 article footer {
   display: flex;
@@ -109,8 +111,8 @@ article img {
   padding-right: 5px;
 }
 article i {
-display: flex;
-justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 article .left {
   display: flex;
@@ -140,13 +142,13 @@ article i:hover {
   padding-top: 15px;
 }
 .new-tweet button {
-  background-color: #4056A1;
-  font-family: 'Bungee', sans-serif;
+  background-color: #4056a1;
+  font-family: "Bungee", sans-serif;
   color: #ffffff;
 }
 .counter {
   justify-content: flex-end;
-  font-family: 'Bungee', sans-serif;
+  font-family: "Bungee", sans-serif;
 }
 .new-tweet textarea {
   display: flex;
@@ -190,10 +192,9 @@ article i:hover {
 ||||||||||||||||||||||||||||||||||||*/
 
 @media (min-width: 1024px) {
- 
- .capsule {
+  .capsule {
     display: flex;
-    justify-content:  flex-end;
+    justify-content: flex-end;
     align-items: flex-end;
     width: 95vw;
     margin: 0 auto;
@@ -202,29 +203,56 @@ article i:hover {
   }
   .top {
     width: 45vw;
-   }
-  .new-tweet{
+  }
+  
+  /*||||||||||||||||||||||||||||||||
+            Global
+||||||||||||||||||||||||||||||||||||*/
+main {
+  width: 50vw;
+}
+section {
+  padding: 15px 0px;
+}
+ /*|||||||||||||||||||||||||||||||||
+            tweets
+||||||||||||||||||||||||||||||||||||*/
+  article {
+    display: flex;
+    flex-direction: column;
+    width: 45vw;
+  }
+  form {
+    width: 45vw;
+  }
+  .new-tweet {
     display: flex;
     flex-direction: column;
     width: 40vw;
-    padding-left: 70px;
   }
   .new-tweet textarea {
     width: 100%;
   }
-  article {
-    display: flex;
-    flex-direction: column;
-    width: 40vw;
-    padding-left: 70px;
-  }
-  main {
-    width: 50vw;
-  }
   .container {
     align-items: flex-end;
   }
-  section {
-    padding: 15px 0px;
+   /*|||||||||||||||||||||||||||||||
+            ERROR MESSAGES
+||||||||||||||||||||||||||||||||||||*/
+  .new-tweet #error-empty {
+    color: red;
+    border: solid red;
+    padding: 10px;
+    display: none;
+    text-align: center;
+    width: 45vw;
+  }
+  .new-tweet #error-over {
+    color: red;
+    border: solid red;
+    padding: 10px;
+    display: none;
+    text-align: center;
+    width: 45vw;
   }
 }
