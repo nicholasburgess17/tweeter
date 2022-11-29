@@ -22,6 +22,8 @@ This repository is the starter code for the project: Students will fork and clon
 - md5 2.1.0 or above
 
 
-
+Mobile view containing a view of a user profile, a tweet form and any tweets a user may see
 !["Mobile view containing a view of a user profile, a tweet form and any tweets a user may see"](./public/images/mobile.png)
+
+Desktop view containing a view of user profile, a tweet form and any tweets a user may see.
 !["Desktop view containing a view of user profile, a tweet form and any tweets a user may see."](./public/images/desktop.png)
